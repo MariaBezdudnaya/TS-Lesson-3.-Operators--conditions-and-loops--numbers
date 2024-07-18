@@ -3,7 +3,7 @@
 let initData: number[] = Array.from({length: 100}, (_, index) => index + 1);
 let results: number[] = [];
 
-for (let i = 0; i < initData.length; i++) {
+for (let i:number = 0; i < initData.length; i++) {
     let num = initData[i] + 2;
     if (num % 2 === 0) {
       results.push(num);
@@ -14,10 +14,33 @@ console.log('1. Использование операторов и услови�
 console.log(initData);
 console.log(results);
 
+// С помощью цикла do while:
+// let initData: number[] = [];
+// let results: number[] = [];
+// let i: number = 1;
+
+// do {
+//    initData.push(i);
+//    i++;
+// } while (i <= 100)
+
+// i = 0;
+// do {
+//    let currentNumber = initData[i] + 2;
+//    if (currentNumber % 2 === 0) {
+//        results.push(currentNumber);
+//    }
+//    i++;
+// } while (i < initData.length);
+  
+// console.log(initData);
+// console.log(results); 
+
+
 // 2. Создание нового массива. Создайте пустой массив squareRootResults. Снова используйте цикл для обхода массива results. На каждой итерации цикла, вычислите квадратный корень текущего числа, и добавьте результат в squareRootResults.
 let squareRootResults: number[] = [];
 
-for (let i = 0; i < results.length; i++) {
+for (let i:number = 0; i < results.length; i++) {
     let sqrt = Math.sqrt(results[i]);
     squareRootResults.push(sqrt);
 }
